@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class GameManeger : MonoBehaviour
 {
+
+    public int minforLevelSucsess = 2;//min number of fruits to go to next level
+    public int totalNumberOfFruitsLeft = 2;// num of fruits counter initailize
+    
+    public static int SucsessCounter = 0;
+    public static int failCounter = 0;    
     public static bool isLevelFail;
     public GameObject LevelFailScreen;
     public GameObject LevelSucsessScreen;
@@ -11,14 +18,19 @@ public class GameManeger : MonoBehaviour
     public GameObject fruit1;
     public GameObject fruit2;
     public static bool fruit1ApearanceTime;
-    public static bool fruit2ApearanceTime;
+    public static bool fruit2ApearanceTime; 
+    
+   
     private void Awake()
     {
         isLevelFail = false;
         isLevelSucsess = false;
         fruit2ApearanceTime= false;
         fruit1ApearanceTime=false;
-       
+        SucsessCounter = 0;
+        failCounter = 0;
+
+
     }
 
     // Update is called once per frame
@@ -27,7 +39,13 @@ public class GameManeger : MonoBehaviour
         
         if (isLevelFail)
         {
+            
             LevelFailScreen.SetActive(true);
+            if (HealthSystem.health == 0 )
+            {
+                //game over screen
+            }
+            
         }
         if(isLevelSucsess)
         {

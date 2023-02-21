@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConveyorWheelSpeen : MonoBehaviour
 {
-    float rotSpeed = -3;
+    public float rotSpeed = -3;
     private void Update()
     {
         transform.Rotate(0, 0, rotSpeed);
