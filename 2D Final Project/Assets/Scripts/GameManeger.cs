@@ -14,6 +14,7 @@ public class GameManeger : MonoBehaviour
     public static bool isLevelFail;
     public GameObject LevelFailScreen;
     public GameObject LevelSucsessScreen;
+    public GameObject GameOverScreen;
     public static bool isLevelSucsess;
     public GameObject fruit1;
     public GameObject fruit2;
@@ -40,12 +41,14 @@ public class GameManeger : MonoBehaviour
         if (isLevelFail)
         {
             
-            LevelFailScreen.SetActive(true);
+            
             if (HealthSystem.health == 0 )
             {
-                //game over screen
+                GameOverScreen.SetActive(true);
             }
-            
+            else
+                LevelFailScreen.SetActive(true);
+
         }
         if(isLevelSucsess)
         {
