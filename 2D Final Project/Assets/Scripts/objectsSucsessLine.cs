@@ -17,6 +17,7 @@ public class objectsSucsessLine : MonoBehaviour
             GameManeger.isLevelSucsess = true;
         else if (GameManeger.failCounter > gm.minforLevelSucsess || ((gm.totalNumberOfFruitsLeft == 0) && (!GameManeger.isLevelSucsess)))
         {
+            Debug.Log("secsesssss buggggg");
             GameManeger.isLevelFail = true;
             HealthSystem.health--;
         }

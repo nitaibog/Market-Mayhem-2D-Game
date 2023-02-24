@@ -24,6 +24,10 @@ public class objectsFallLine : MonoBehaviour
             HealthSystem.health--;
         }
         else if (GameManeger.SucsessCounter >= gm.minforLevelSucsess && gm.totalNumberOfFruitsLeft == 0)
+        {
             GameManeger.isLevelSucsess = true;
+            Debug.Log("fail bugggggg");
+        }
+            
     }
 }

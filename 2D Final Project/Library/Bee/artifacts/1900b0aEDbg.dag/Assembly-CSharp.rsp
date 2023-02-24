@@ -388,6 +388,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/failScreenLives.cs"
 "Assets/fruit_animation.cs"
+"Assets/healthOnQuit.cs"
 "Assets/MusicControoler.cs"
 "Assets/quit.cs"
 "Assets/Scripts/ConveyorWheelSpeen.cs"
