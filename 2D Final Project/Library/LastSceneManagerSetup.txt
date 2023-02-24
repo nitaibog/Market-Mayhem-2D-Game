@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/open screen.unity
+- path: Assets/Scenes/level 3.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
