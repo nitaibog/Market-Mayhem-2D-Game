@@ -10,7 +10,10 @@ public class Drag_trampoline : MonoBehaviour
     private Vector2 originalPos;
     public float TrampolineRange = 10f;
     public bool isYMovement = false;
-
+    public bool isMagnet = false;
+    Collider2D objectCollider;
+    public Effector2D Magnet;
+    public AudioSource audioEffect;
     // Update is called once per frame
     void Awake(){
         originalPos = transform.position;
@@ -29,11 +32,26 @@ public class Drag_trampoline : MonoBehaviour
     private void OnMouseDown(){//start dragging
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         dragging = true;
+        if (isMagnet)
+        {
+            objectCollider = GetComponent<Collider2D>();
+            Magnet = GetComponent < PointEffector2D>();
+            objectCollider.isTrigger = true;
+            
+        }
 
     }
 
     private void OnMouseUp(){//stop dragging
         dragging = false;
+        objectCollider.isTrigger = false;
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            audioEffect.Play(); ;
+        }
     }
 
 }

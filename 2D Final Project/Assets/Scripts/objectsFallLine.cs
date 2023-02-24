@@ -15,11 +15,13 @@ public class objectsFallLine : MonoBehaviour
 
             gm.totalNumberOfFruitsLeft--;
             GameManeger.failCounter++;
+            Debug.Log("Fail:" + GameManeger.failCounter);
             if (GameManeger.failCounter > gm.minforLevelSucsess || ((gm.totalNumberOfFruitsLeft == 0) && (!GameManeger.isLevelSucsess)))
             {
                 GameManeger.isLevelFail = true;
                 HealthSystem.health--;
             }
+            
             
         }
     }

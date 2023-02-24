@@ -9,10 +9,12 @@ public class objectsSucsessLine : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            gm.totalNumberOfFruitsLeft --;
+            gm.totalNumberOfFruitsLeft--;
             GameManeger.SucsessCounter++;
+            Debug.Log("Sucsses:" + GameManeger.SucsessCounter);
             if(GameManeger.SucsessCounter >= gm.minforLevelSucsess && gm.totalNumberOfFruitsLeft == 0)
                 GameManeger.isLevelSucsess = true;
+            
         }
     }
 }

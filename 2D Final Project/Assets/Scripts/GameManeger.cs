@@ -16,21 +16,17 @@ public class GameManeger : MonoBehaviour
     public GameObject LevelSucsessScreen;
     public GameObject GameOverScreen;
     public static bool isLevelSucsess;
-    public GameObject fruit1;
-    public GameObject fruit2;
-    public static bool fruit1ApearanceTime;
-    public static bool fruit2ApearanceTime; 
-    
-   
+    public GameObject stageReqMenu;
+
+
     private void Awake()
     {
         isLevelFail = false;
         isLevelSucsess = false;
-        fruit2ApearanceTime= false;
-        fruit1ApearanceTime=false;
         SucsessCounter = 0;
         failCounter = 0;
-
+        stageReqMenu.SetActive(true);
+        Time.timeScale = 0;
 
     }
 
@@ -54,13 +50,6 @@ public class GameManeger : MonoBehaviour
         {
             LevelSucsessScreen.SetActive(true);
         }
-        if (fruit1ApearanceTime)
-        {
-            fruit1.SetActive(true);
-        }
-        if(fruit2ApearanceTime)
-        {
-          fruit2.SetActive(true);
-        }
+        
     }
 }

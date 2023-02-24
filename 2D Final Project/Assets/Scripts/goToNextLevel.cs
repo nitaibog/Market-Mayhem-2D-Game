@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class goToNextLevel : MonoBehaviour
 {
     public GameObject puase;
+    public GameObject puaseMenu;
+    public GameObject SettingsMenu;
+    public GameObject StageReqMenu;
+    
+
+    
     public void NextSceneButton(string level)
     {
         SceneManager.LoadScene(level);
@@ -20,6 +26,16 @@ public class goToNextLevel : MonoBehaviour
     {
         Time.timeScale = 1;
         puase.SetActive(false);
+    }
+    public void SettingButton()
+    {
+        puaseMenu.SetActive(false);
+        SettingsMenu.SetActive(true);
+    }
+    public void okButton(bool reasume)
+    {
+        Time.timeScale = 1;
+        StageReqMenu.SetActive(false);
     }
 
 }

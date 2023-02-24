@@ -9,10 +9,7 @@ public class failScreenLives : MonoBehaviour
     public GameObject TwoLives;
     public GameObject ThreeLives;
 
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
