@@ -7,6 +7,7 @@ TagManager:
   - Platform
   - Sucsses
   - Fail
+  - Spike
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class Drag_trampoline : MonoBehaviour
     public float TrampolineRange = 10f;
     public bool isYMovement = false;
     public bool isMagnet = false;
+    public bool isStatic = false;
     Collider2D objectCollider;
     public Effector2D Magnet;
     public AudioSource audioEffect;
@@ -19,15 +20,17 @@ public class Drag_trampoline : MonoBehaviour
         originalPos = transform.position;
 
     }
-        // Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
-        if(!dragging) return;
-        if(!isYMovement)
-            transform.position = new Vector2(Mathf.Clamp(((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset).x,(originalPos.x-TrampolineRange),(originalPos.x+TrampolineRange)), originalPos.y);
-        if(isYMovement)
-            transform.position = new Vector2(originalPos.x, Mathf.Clamp(((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset).y, (originalPos.y - TrampolineRange), (originalPos.y + TrampolineRange)));
-
+        if (!isStatic) 
+        { 
+            if (!dragging) return;
+            if (!isYMovement)
+                transform.position = new Vector2(Mathf.Clamp(((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset).x, (originalPos.x - TrampolineRange), (originalPos.x + TrampolineRange)), originalPos.y);
+            if (isYMovement)
+                transform.position = new Vector2(originalPos.x, Mathf.Clamp(((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset).y, (originalPos.y - TrampolineRange), (originalPos.y + TrampolineRange)));
+        }
     }
     private void OnMouseDown(){//start dragging
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -50,7 +53,7 @@ public class Drag_trampoline : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            audioEffect.Play(); ;
+            audioEffect.Play(); 
         }
     }
 

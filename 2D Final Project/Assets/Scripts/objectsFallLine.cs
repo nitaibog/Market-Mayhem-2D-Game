@@ -7,7 +7,7 @@ using UnityEngine;
 public class objectsFallLine : MonoBehaviour
 {
     public GameManeger gm;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         
         if (collision.CompareTag("Player"))
@@ -15,14 +15,15 @@ public class objectsFallLine : MonoBehaviour
 
             gm.totalNumberOfFruitsLeft--;
             GameManeger.failCounter++;
-            Debug.Log("Fail:" + GameManeger.failCounter);
-            if (GameManeger.failCounter > gm.minforLevelSucsess || ((gm.totalNumberOfFruitsLeft == 0) && (!GameManeger.isLevelSucsess)))
-            {
-                GameManeger.isLevelFail = true;
-                HealthSystem.health--;
-            }
-            
-            
+            Debug.Log("Fail:" + GameManeger.failCounter + "totalNumerLeft: " + gm.totalNumberOfFruitsLeft);
+
         }
+        if (GameManeger.failCounter > gm.minforLevelSucsess || ((gm.totalNumberOfFruitsLeft == 0) && (!GameManeger.isLevelSucsess)))
+        {
+            GameManeger.isLevelFail = true;
+            HealthSystem.health--;
+        }
+        else if (GameManeger.SucsessCounter >= gm.minforLevelSucsess && gm.totalNumberOfFruitsLeft == 0)
+            GameManeger.isLevelSucsess = true;
     }
 }

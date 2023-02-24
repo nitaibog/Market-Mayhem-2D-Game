@@ -11,10 +11,14 @@ public class objectsSucsessLine : MonoBehaviour
         {
             gm.totalNumberOfFruitsLeft--;
             GameManeger.SucsessCounter++;
-            Debug.Log("Sucsses:" + GameManeger.SucsessCounter);
-            if(GameManeger.SucsessCounter >= gm.minforLevelSucsess && gm.totalNumberOfFruitsLeft == 0)
-                GameManeger.isLevelSucsess = true;
-            
+            Debug.Log("Sucsses:" + GameManeger.SucsessCounter + "totalNumerLeft: " + gm.totalNumberOfFruitsLeft);            
+        }
+        if (GameManeger.SucsessCounter >= gm.minforLevelSucsess && gm.totalNumberOfFruitsLeft == 0)
+            GameManeger.isLevelSucsess = true;
+        else if (GameManeger.failCounter > gm.minforLevelSucsess || ((gm.totalNumberOfFruitsLeft == 0) && (!GameManeger.isLevelSucsess)))
+        {
+            GameManeger.isLevelFail = true;
+            HealthSystem.health--;
         }
     }
 }

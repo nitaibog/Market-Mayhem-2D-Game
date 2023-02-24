@@ -389,6 +389,7 @@
 "Assets/failScreenLives.cs"
 "Assets/fruit_animation.cs"
 "Assets/MusicControoler.cs"
+"Assets/quit.cs"
 "Assets/Scripts/ConveyorWheelSpeen.cs"
 "Assets/Scripts/Drag.cs"
 "Assets/Scripts/Drag_trampoline.cs"

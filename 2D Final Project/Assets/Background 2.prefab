@@ -549,7 +549,7 @@ RectTransform:
   - {fileID: 1577994780251472368}
   - {fileID: 1577994779441972865}
   - {fileID: 3555771396292973739}
-  - {fileID: 6554146901159487935}
+  - {fileID: 1959882071772095358}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -799,10 +799,10 @@ RectTransform:
   m_Father: {fileID: 1577994780792927063}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 581.7, y: 252}
-  m_SizeDelta: {x: 0.91, y: 0.91}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -40.9, y: -47.4}
+  m_SizeDelta: {x: 0.90997314, y: 0.91000366}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3555771396292973737
 MonoBehaviour:
@@ -958,7 +958,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6554146901159487935}
+  - component: {fileID: 1959882071772095358}
   - component: {fileID: 8718150450453096167}
   m_Layer: 0
   m_Name: WhatsApp Image 2023-02-23 at 20.21.18
@@ -967,21 +967,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6554146901159487935
-Transform:
+--- !u!224 &1959882071772095358
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4896635273556484501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 576.89996, y: 209.4, z: -2700}
+  m_LocalPosition: {x: 0, y: 0, z: -2700}
   m_LocalScale: {x: 6, y: 6, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1577994780792927063}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -43, y: -85}
+  m_SizeDelta: {x: 15.01001, y: 5.51001}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &8718150450453096167
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1020,9 +1025,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1150241763
+  m_SortingLayer: -1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 6c3bb001d72d7a24c9ed16f5505e6343, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

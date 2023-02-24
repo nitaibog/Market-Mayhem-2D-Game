@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: bb1140fb33a31cd4a8605d4dd285ddc5, type: 3}
     - target: {fileID: 3440008004003074336, guid: f9efe666245bb524ba381186865d1321, type: 3}
       propertyPath: m_Name
-      value: cabbage
+      value: cabbage Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3440008004003074337, guid: f9efe666245bb524ba381186865d1321, type: 3}
       propertyPath: m_RootOrder
@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3440008004003074340, guid: f9efe666245bb524ba381186865d1321, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3440008004003074341, guid: f9efe666245bb524ba381186865d1321, type: 3}
       propertyPath: m_Sprite
@@ -95,5 +95,13 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.17703386
       objectReference: {fileID: 0}
+    - target: {fileID: 4560059938238591313, guid: f9efe666245bb524ba381186865d1321, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ba4dd2e50402fa74fa1913702e2ada8d, type: 3}
+    - target: {fileID: 8919212239745695865, guid: f9efe666245bb524ba381186865d1321, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 62780121fd57e8d45b2ab4e45a84e6cc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9efe666245bb524ba381186865d1321, type: 3}

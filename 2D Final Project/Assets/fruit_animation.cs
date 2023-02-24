@@ -9,12 +9,15 @@ public class fruit_animation : MonoBehaviour
     //public AudioSource audio1;
     public AudioSource audio2;
     public AudioSource audio3;
-    
+    public Rigidbody2D rigidbody2;
+    public GameManeger gm;
+
 
     private Animator animator;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        //rigidbody2= GetComponent<Rigidbody2D>();
         
         
     }
@@ -28,6 +31,7 @@ public class fruit_animation : MonoBehaviour
         
 
     }
+    
     IEnumerator Talk()
     {
         yield return new WaitForSeconds(Random.Range(3, 6));
@@ -63,12 +67,39 @@ public class fruit_animation : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Fail"))
         {
-            audio2.Play(); ;
+            audio2.Play(); 
         }
         if (collision.gameObject.CompareTag("Sucsses"))
         {
-            audio3.Play(); ;
+            audio3.Play(); 
         }
+        
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Spike"))
+        {
+            audio2.Play();
+            gm.totalNumberOfFruitsLeft--;
+            GameManeger.failCounter++;
+            Debug.Log("Fail:" + GameManeger.failCounter + "totalNumerLeft: " + gm.totalNumberOfFruitsLeft);
+            if (GameManeger.failCounter > gm.minforLevelSucsess || ((gm.totalNumberOfFruitsLeft == 0) && (!GameManeger.isLevelSucsess)))
+            {
+                GameManeger.isLevelFail = true;
+                HealthSystem.health--;
+            }
+            else if (GameManeger.SucsessCounter >= gm.minforLevelSucsess && gm.totalNumberOfFruitsLeft == 0)
+                GameManeger.isLevelSucsess = true;
+            rigidbody2.bodyType = RigidbodyType2D.Static;
+            Invoke("Fruitdeath", 2);
+
+        }
+    }
+
+    public void Fruitdeath()
+    {
+
+        gameObject.SetActive(false);
     }
 
 

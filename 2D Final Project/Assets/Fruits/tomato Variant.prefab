@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3440008004003074336, guid: f9efe666245bb524ba381186865d1321, type: 3}
       propertyPath: m_Name
-      value: tomato
+      value: tomato Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3440008004003074337, guid: f9efe666245bb524ba381186865d1321, type: 3}
       propertyPath: m_RootOrder
@@ -17,11 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3440008004003074337, guid: f9efe666245bb524ba381186865d1321, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3440008004003074337, guid: f9efe666245bb524ba381186865d1321, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3440008004003074337, guid: f9efe666245bb524ba381186865d1321, type: 3}
       propertyPath: m_LocalScale.z
@@ -91,5 +91,13 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.17703386
       objectReference: {fileID: 0}
+    - target: {fileID: 4560059938238591313, guid: f9efe666245bb524ba381186865d1321, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c9daf81b75bd1949b8199de0bed611d, type: 3}
+    - target: {fileID: 8919212239745695865, guid: f9efe666245bb524ba381186865d1321, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1da11a80681884542b94396fa82a8314, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9efe666245bb524ba381186865d1321, type: 3}
