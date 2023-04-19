@@ -1,6 +1,6 @@
-# Market Mayhem - A 2D Game
+# Market Mayhem - 2D Game
 
-No One Left Behinde! Help every One Escape the Super-Market!
+**No One Left Behind! Help Everyone Escape the Supermarket!
 
 link : https://nitaibogner.itch.io/market-mayhem
 
